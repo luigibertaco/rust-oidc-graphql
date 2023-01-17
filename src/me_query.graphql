@@ -1,0 +1,10 @@
+query MeQuery {
+  me {
+    me {
+      id username email
+    }
+    errors {
+      message fields
+    }
+  }
+}

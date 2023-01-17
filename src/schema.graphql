@@ -1,0 +1,35 @@
+type Query {
+  me: MeResult!
+}
+
+# Custom error.
+type Error {
+  # The fields that caused the error.
+  fields: [String!]
+
+  # Error message.
+  message: String!
+}
+
+# Interface for Query and Mutation's results.
+interface Result {
+  errors: [Error!]
+}
+
+# Result of Query `me`.
+type MeResult implements Result {
+  errors: [Error!]
+  me: User
+}
+
+# Defines a User.
+type User {
+  # The user's email address.
+  email: String!
+
+  # User's UUID.
+  id: ID!
+
+  # User's username.
+  username: String
+}

@@ -30,3 +30,10 @@ cd rust-oidc-graphql
     ```shell
     CLIENT_ID=... CLIENT_SECRET=... USERNAME=... PASSWORD=... API_URL=... OIDC_URL=... cargo run
     ```
+
+## Ideas
+
+- [x] Basic Oauth2 direct grant flow to retrieve access token
+- [x] Basic GraphQL query execution with partial schema definition
+- [ ] Access token expiring and caching strategy
+- [ ] Custom directives and scalars usage
